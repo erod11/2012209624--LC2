@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _2012209624_PER.Configuration
+namespace _2012209624_PER.Repositories
 {
-    class ClienteConfiguration
+    class TipoTripulacionRepository
     {
     }
 }
