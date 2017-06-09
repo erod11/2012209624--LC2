@@ -40,7 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="a12209624DbContext.cs" />
+    <Compile Include="2012209624Context.cs" />
     <Compile Include="Configuration\AdministrativoConfiguration.cs" />
     <Compile Include="Configuration\BusConfiguration.cs" />
     <Compile Include="Configuration\ClienteConfiguration.cs" />

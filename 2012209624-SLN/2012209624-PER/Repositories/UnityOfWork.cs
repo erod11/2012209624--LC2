@@ -9,6 +9,7 @@ namespace _2012209624_PER.Repositories
 {
     public class UnityOfWork : IUnityOfWork
     {
+        private readonly a12209624DbContext _Context;
 
         public IAdministrativoRepository Administrativos { get; private set; }
 
@@ -26,7 +27,7 @@ namespace _2012209624_PER.Repositories
 
         public ITipoComprobanteRepository TipoComprobantes { get; private set; }
 
-        public ITipoLugarRepository TipoLugars { get; private set; }
+        public ITipoLugarRepository TipoLugares { get; private set; }
 
         public ITipoPagoRepository TipoPagos { get; private set; }
 
@@ -36,19 +37,39 @@ namespace _2012209624_PER.Repositories
 
         public ITransporteRepository Transportes { get; private set; }
 
-        public ITripulacionRepository Tripulacions { get; private set; }
+        public ITripulacionRepository Tripulaciones { get; private set; }
 
         public IVentaRepository Ventas { get; private set; }
 
         private UnityOfWork()
         {
             _Context = new a12209624DbContext();
+
+            Administrativos = new AdministrativoRepository(_Context);
+            Buss = new BusRepository(_Context);
+            Clientes = new ClienteRepository(_Context);
+            Empleados = new EmpleadoRepository(_Context);
+            Encomiendas = new EncomiendaRepository(_Context);
+            LugarViajes = new LugarViajeRepository(_Context);
+            Servicios = new ServicioRepository(_Context);
+            TipoComprobantes = new TipoComprobanteRepository(_Context);
+            TipoLugares = new TipoLugarRepository(_Context);
+            TipoPagos = new TipoPagoRepository(_Context);
+            TipoTripulacions = new TipoTripulacionRepository(_Context);
+            TipoViajes= new TipoViajeRepository(_Context);
+            Tripulaciones = new TripulacionRepository(_Context);
+            Ventas = new VentaRepository(_Context);
         }
+
+
+
 
         public static UnityOfWork
         {
             
         }
+
+        
 
 
 
